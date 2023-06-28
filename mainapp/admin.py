@@ -4,14 +4,17 @@ from mainapp.models import School, Student
 
 
 class SchoolAdmin(admin.ModelAdmin):
-    list_display = ("name",)
+    list_display = (
+        "id",
+        "name",
+    )
     list_display_links = ("id", "name")
     list_per_page = 25
     list_filter = ("created_at", "updated_at")
 
 
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ("name", "enrollment", "school")
+    list_display = ("id", "name", "enrollment", "school")
     list_display_links = ("id", "name")
     list_per_page = 25
     list_filter = ("created_at", "updated_at")
